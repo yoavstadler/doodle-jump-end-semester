@@ -57,6 +57,7 @@ public class Player_movment : MonoBehaviour
         {
             PlayerPrefs.SetInt("HS", 0);
         }
+        PlayAnimation();
 
     }
 
