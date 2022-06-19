@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.SceneManagement;
 
 public class lostCanvasScipt : MonoBehaviour
 {
@@ -14,7 +14,7 @@ public class lostCanvasScipt : MonoBehaviour
 
     public void restartGame() // לולאת התחלת המשחק מחדש
     {
-        EditorSceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex); // מתחיל את הסצנה הנוכחית מחדש
     }
 
    
@@ -22,5 +22,10 @@ public class lostCanvasScipt : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 }
